@@ -3,6 +3,8 @@ import Banner from "../../components/Banner/Banner";
 import MealsCategory from "../../components/MealsCategory/MealsCategory";
 import MembershipSection from "../../components/MembershipSection/MembershipSection";
 import WeeklyMealPlan from "../../components/WeeklyMealPlan/WeeklyMealPlan";
+import HostelMap from "../../components/HostelMap/HostelMap";
+import MeetOurChefs from "../../components/MeetOurChefs/MeetOurChefs";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <MembershipSection></MembershipSection>
       <MealsCategory></MealsCategory>
       <WeeklyMealPlan></WeeklyMealPlan>
+      <HostelMap></HostelMap>
+      <MeetOurChefs></MeetOurChefs>
     </div>
   );
 };
