@@ -16,9 +16,9 @@ const Home = () => {
       <Banner></Banner>
       <MembershipSection></MembershipSection>
       <MealsCategory></MealsCategory>
+      <Offers></Offers>
       <WeeklyMealPlan></WeeklyMealPlan>
       <Facilities></Facilities>
-      <Offers></Offers>
       <HostelMap></HostelMap>
     </div>
   );

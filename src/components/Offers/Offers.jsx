@@ -12,40 +12,40 @@ const Offers = () => {
       description:
         "Order 10+ meals in a month and get a 50% discount on your next meal.",
       validity: "Valid throughout the year.",
-      image: "loyalty_rewards.jpg",
+      image: "https://i.ibb.co.com/fW8nLTq/spring-roll-6760871-1280.jpg",
     },
     {
       title: "Midnight Snack Deal",
       description: "Get a free small snack on any meal order after 10 PM.",
       validity: "Every night.",
-      image: "midnight_snack.jpg",
+      image: "https://i.ibb.co.com/tpJNmJbR/intro-1696965449.jpg",
     },
     {
       title: "Refer & Earn",
       description: "Refer a new student and both get a 20% discount.",
       validity: "Limited time offer.",
-      image: "refer_earn.jpg",
+      image: "https://i.ibb.co.com/PGN30c0h/food-715542-1280.jpg",
     },
     {
       title: "Festive Special",
       description:
         "Enjoy a 30% discount on special festival menus (e.g., Ramadan, Puja, New Year).",
       validity: "During festive seasons.",
-      image: "festive_special.jpg",
+      image: "https://i.ibb.co.com/mVvKKkH3/firangi-4929031-1280.jpg",
     },
   ];
 
   return (
     <div>
       <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
           Special Offers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {offers.map((offer, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300"
+              className="bg-white rounded-lg shadow-xl p-4 transform hover:scale-105 transition duration-300"
             >
               <img
                 src={offer.image}
