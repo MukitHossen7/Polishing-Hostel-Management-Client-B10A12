@@ -26,6 +26,7 @@ import ViewMealsReviews from "../pages/Dashboard/User/ViewMealsReviews/ViewMeals
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ServeMeals from "../pages/Dashboard/Admin/ServeMeals/ServeMeals";
 import ChefsStaff from "../pages/ChefsStaff/ChefsStaff";
+import Blogs from "../pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/chefs_staff",
         element: <ChefsStaff></ChefsStaff>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
       {
         path: "/meal/:id",

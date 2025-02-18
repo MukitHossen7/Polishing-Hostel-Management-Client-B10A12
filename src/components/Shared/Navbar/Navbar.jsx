@@ -77,6 +77,16 @@ const Navbar = () => {
             >
               Chefs & Staff
             </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600 text-base"
+                  : "hover:text-blue-600 transition text-base"
+              }
+            >
+              Blogs
+            </NavLink>
 
             {user ? (
               <div className="relative">
@@ -192,6 +202,16 @@ const Navbar = () => {
               }
             >
               Chefs & Staff
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive
+                  ? "block px-4 text-blue-600 transition"
+                  : "block px-4 text-gray-800 transition"
+              }
+            >
+              Blogs
             </NavLink>
           </div>
           {user ? (
