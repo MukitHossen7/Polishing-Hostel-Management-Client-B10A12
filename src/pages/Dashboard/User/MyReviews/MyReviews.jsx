@@ -90,85 +90,95 @@ const MyReviews = () => {
         </Helmet>
         <div className="mx-auto">
           <h1 className="text-2xl font-semibold mb-6">My Reviews</h1>
-          <div className="overflow-x-auto shadow-md rounded-md bg-white">
-            <table className="table-auto w-full bg-white border border-gray-100">
-              <thead className="bg-gray-100">
-                <tr>
-                  <th className="px-4 py-2 text-left text-gray-700 font-medium">
-                    Meal Title
-                  </th>
-                  <th className="px-4 py-2 text-left text-gray-700 font-medium">
-                    Likes
-                  </th>
-                  <th className="px-4 py-2 text-left text-gray-700 font-medium">
-                    Review
-                  </th>
-                  <th className="px-4 py-2 text-left text-gray-700 font-medium">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {currentReviews.map((review) => (
-                  <tr
-                    key={review._id}
-                    className="border-t hover:bg-gray-50 text-sm transition duration-150"
-                  >
-                    <td className="px-4 py-2">{review?.foodData?.title}</td>
-                    <td className="px-4 py-2">{review?.foodData?.likes}</td>
-                    <td className="px-4 py-2">{review?.description}</td>
-                    <td className="px-4 py-2 flex items-center space-x-2">
-                      <button
-                        onClick={() => handleUpdateReview(review)}
-                        className="bg-blue-100 text-blue-500 hover:bg-blue-200 p-2 rounded"
-                        aria-label="Edit Review"
+          {allReviews.length === 0 ? (
+            <div className="text-center text-gray-600  text-2xl">
+              No reviews yet
+            </div>
+          ) : (
+            <div>
+              <div className="overflow-x-auto shadow-md rounded-md bg-white">
+                <table className="table-auto w-full bg-white border border-gray-100">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-4 py-2 text-left text-gray-700 font-medium">
+                        Meal Title
+                      </th>
+                      <th className="px-4 py-2 text-left text-gray-700 font-medium">
+                        Likes
+                      </th>
+                      <th className="px-4 py-2 text-left text-gray-700 font-medium">
+                        Review
+                      </th>
+                      <th className="px-4 py-2 text-left text-gray-700 font-medium">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {currentReviews.map((review) => (
+                      <tr
+                        key={review._id}
+                        className="border-t hover:bg-gray-50 text-sm transition duration-150"
                       >
-                        <FaEdit />
-                      </button>
-                      <button
-                        onClick={() =>
-                          handleDeleteReview(review._id, review.foodId)
-                        }
-                        className="bg-red-100 text-red-500 hover:bg-red-200 p-2 rounded"
-                        aria-label="Delete Review"
-                      >
-                        <FaTrash />
-                      </button>
-                      <Link to={`/dashboard/view-meals-reviews/${review._id}`}>
-                        <button
-                          className="bg-green-100 text-green-500 hover:bg-green-200 p-2 rounded"
-                          aria-label="View Meal"
-                        >
-                          <FaEye />
-                        </button>
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                        <td className="px-4 py-2">{review?.foodData?.title}</td>
+                        <td className="px-4 py-2">{review?.foodData?.likes}</td>
+                        <td className="px-4 py-2">{review?.description}</td>
+                        <td className="px-4 py-2 flex items-center space-x-2">
+                          <button
+                            onClick={() => handleUpdateReview(review)}
+                            className="bg-blue-100 text-blue-500 hover:bg-blue-200 p-2 rounded"
+                            aria-label="Edit Review"
+                          >
+                            <FaEdit />
+                          </button>
+                          <button
+                            onClick={() =>
+                              handleDeleteReview(review._id, review.foodId)
+                            }
+                            className="bg-red-100 text-red-500 hover:bg-red-200 p-2 rounded"
+                            aria-label="Delete Review"
+                          >
+                            <FaTrash />
+                          </button>
+                          <Link
+                            to={`/dashboard/view-meals-reviews/${review._id}`}
+                          >
+                            <button
+                              className="bg-green-100 text-green-500 hover:bg-green-200 p-2 rounded"
+                              aria-label="View Meal"
+                            >
+                              <FaEye />
+                            </button>
+                          </Link>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
 
-          {/* Pagination Controls */}
-          <div className="flex justify-self-center items-center mt-6 gap-3">
-            <button
-              className="px-3 text-sm py-1 hover:bg-gradient-to-l bg-gradient-to-r from-blue-600 to-blue-800 text-gray-100 rounded"
-              onClick={handlePrevPage}
-              disabled={currentPage === 1}
-            >
-              Previous
-            </button>
-            <span className="font-semibold text-sm">
-              Page {currentPage} of {totalPages}
-            </span>
-            <button
-              className="px-4 text-sm py-1 hover:bg-gradient-to-l bg-gradient-to-r from-blue-600 to-blue-800 text-gray-100 rounded"
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-            >
-              Next
-            </button>
-          </div>
+              {/* Pagination Controls */}
+              <div className="flex justify-self-center items-center mt-6 gap-3">
+                <button
+                  className="px-3 text-sm py-1 hover:bg-gradient-to-l bg-gradient-to-r from-blue-600 to-blue-800 text-gray-100 rounded"
+                  onClick={handlePrevPage}
+                  disabled={currentPage === 1}
+                >
+                  Previous
+                </button>
+                <span className="font-semibold text-sm">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  className="px-4 text-sm py-1 hover:bg-gradient-to-l bg-gradient-to-r from-blue-600 to-blue-800 text-gray-100 rounded"
+                  onClick={handleNextPage}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <UserReviewsModal

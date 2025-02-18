@@ -95,9 +95,12 @@ const LogIn = () => {
           >
             <div className="space-y-4">
               <div>
-                <label htmlFor="email" className="block mb-2 text-sm">
-                  Email address<span className="text-red-500 font-bold">*</span>
-                </label>
+                <div>
+                  <label htmlFor="email" className="block mb-2 text-sm">
+                    Email address
+                    <span className="text-red-500 font-bold">*</span>
+                  </label>
+                </div>
                 <input
                   type="email"
                   {...register("email", { required: true })}

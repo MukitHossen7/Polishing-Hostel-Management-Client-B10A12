@@ -109,7 +109,7 @@ const PaymentHistory = () => {
             </div>
           </div>
         ) : (
-          <div className="text-center bg-red-100 text-red-600 p-4 rounded-lg shadow-md">
+          <div className="text-center  text-text-600 p-4 ">
             <p className="text-2xl">No payment history found.</p>
           </div>
         )}
