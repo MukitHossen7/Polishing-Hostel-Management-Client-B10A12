@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const HostelMap = () => {
   const [location, setLocation] = useState(null);
-
   const handleFindHostel = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -22,21 +21,21 @@ const HostelMap = () => {
   };
   return (
     <div>
-      <section className="w-full px-4 py-12 bg-gray-100 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800">
-            📍 Hostel Map & Dining Area Location
+      <section className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
+            Hostel Map & Dining Area Location
           </h2>
           <p className="mt-2 text-gray-600">
             Find out where the hostel dining area is located on campus.
           </p>
 
           {/* Google Map Embed */}
-          <div className="mt-6 w-full h-64 rounded-lg overflow-hidden shadow-lg">
+          <div className="mt-6 w-full h-72 md:h-[450px] rounded-lg overflow-hidden ">
             <iframe
-              className="w-full h-full"
-              src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Your+Hostel+Location"
-              allowFullScreen
+              className="w-full h-full rounded-lg "
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902119233826!2d90.38909951536334!3d23.750887294659596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ1JzAyLjMiTiA5MMKwMjMnMzIuNiJF!5e0!3m2!1sen!2sbd!4v1633791792796!5m2!1sen!2sbd"
+              allowFullScreen=""
               loading="lazy"
             ></iframe>
           </div>
