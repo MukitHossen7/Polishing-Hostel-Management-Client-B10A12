@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { FcViewDetails } from "react-icons/fc";
 import { BsCurrencyDollar } from "react-icons/bs";
+import { BiSolidCategory } from "react-icons/bi";
 /* eslint-disable react/prop-types */
 const AllMealCard = ({ meal }) => {
   return (
@@ -26,7 +26,7 @@ const AllMealCard = ({ meal }) => {
           </span>
           <Link to={`/meal/${meal._id}`}>
             <button className="hover:bg-gradient-to-l bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-md flex flex-row gap-1">
-              <FcViewDetails className="text-xl" />
+              <BiSolidCategory className="text-xl" />
               Details
             </button>
           </Link>

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { FcViewDetails } from "react-icons/fc";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { MdOutlineStarRate } from "react-icons/md";
+import { BiSolidCategory } from "react-icons/bi";
+
 // eslint-disable-next-line react/prop-types
 const MealCard = ({ meal }) => {
   const { title, image, averageRating, price, _id, description } = meal || {};
@@ -27,7 +28,7 @@ const MealCard = ({ meal }) => {
           </p>
           <Link to={`/meal/${_id}`}>
             <button className="hover:bg-gradient-to-l  bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-md flex flex-row items-center gap-1 ">
-              <FcViewDetails className="text-xl" />
+              <BiSolidCategory className="text-xl" />
               View Details
             </button>
           </Link>
