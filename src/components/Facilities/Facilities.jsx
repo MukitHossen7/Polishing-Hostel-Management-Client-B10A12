@@ -26,7 +26,7 @@ const Facilities = () => {
   ];
 
   return (
-    <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
+    <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
       {/* Hostel Overview & Facilities */}
       <section className="text-center">
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">

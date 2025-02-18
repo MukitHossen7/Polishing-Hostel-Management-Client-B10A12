@@ -21,7 +21,7 @@ const MealsCategory = () => {
   }, [activeTab]);
   const categories = ["Breakfast", "Lunch", "Dinner", "All Meals"];
   return (
-    <section className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto pt-4 pb-10">
+    <section className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
       <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-800 mb-6">
         Meals by Category
       </h2>

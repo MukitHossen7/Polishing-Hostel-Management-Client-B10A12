@@ -10,7 +10,7 @@ const WeeklyMealPlan = () => {
   ];
 
   return (
-    <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto p-6 bg-white shadow rounded-md mt-8">
+    <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
       <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-800 mb-4">
         Weekly Meal Plan
       </h2>
@@ -18,7 +18,7 @@ const WeeklyMealPlan = () => {
         {meals.map((meal, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+            className="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300"
           >
             <h3 className="text-lg font-semibold text-gray-800">{meal.day}</h3>
             <p className="text-gray-600">Meal: {meal.meal}</p>
