@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import loginImg from "../../../src/assets/Auth/Login-bro.svg";
+import loginImg from "../../../src/assets/Auth/undraw_fingerprint_kdwq.svg";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -85,7 +85,7 @@ const LogIn = () => {
             className="w-full md:w-[400px] lg:w-[500px]"
           ></img>
         </div>
-        <div className="flex flex-col w-full md:w-[500px]  p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
+        <div className="flex flex-col w-full md:w-[500px]  p-6  sm:p-10text-gray-900">
           <div className="mb-4 text-center">
             <h1 className="my-3 text-3xl font-semibold">Log In</h1>
           </div>
@@ -102,7 +102,7 @@ const LogIn = () => {
                   type="email"
                   {...register("email", { required: true })}
                   placeholder="Enter Your Email Here"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
+                  className="w-full px-3 py-2 border rounded-md border-gray-200 focus:outline-blue-500  text-gray-800"
                   data-temp-mail-org="0"
                 />
                 {errors.email && (
@@ -125,7 +125,7 @@ const LogIn = () => {
                   {...register("password", { required: true })}
                   autoComplete="current-password"
                   placeholder="*******"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
+                  className="w-full px-3 py-2 border rounded-md border-gray-200 focus:outline-blue-500  text-gray-800"
                 />
                 <button
                   type="button"
@@ -156,11 +156,7 @@ const LogIn = () => {
               </button>
             </div>
           </form>
-          <div className="space-y-1">
-            <button className="text-xs hover:underline hover:text-lime-500 text-gray-400">
-              Forgot password?
-            </button>
-          </div>
+
           <div className="flex items-center pt-4 space-x-1">
             <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
             <p className="px-3 text-sm dark:text-gray-400">
