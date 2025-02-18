@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
-import signupImg from "../../../src/assets/Auth/Sign up-amico.svg";
 import { useForm } from "react-hook-form";
 import { imageUpload } from "../../api/utils";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -10,6 +9,8 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { IoEyeSharp } from "react-icons/io5";
 import { FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import signup from "../../assets/Auth/sign.json";
+import Lottie from "react-lottie";
 const SignUp = () => {
   const {
     createSignUpNewUsers,
@@ -26,6 +27,14 @@ const SignUp = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: signup,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   const handleSignup = async (data) => {
     const photo = await imageUpload(data.image[0]);
     const name = data.name;
@@ -85,12 +94,12 @@ const SignUp = () => {
       <Helmet>
         <title>SignUp || Hostel Management</title>
       </Helmet>
-      <div className="">
-        <img src={signupImg} className="w-full md:w-[400px] lg:w-[500px]"></img>
+      <div className="w-full md:w-[400px] lg:w-[400px]">
+        <Lottie options={defaultOptions}></Lottie>
       </div>
-      <div className="flex flex-col p-6 rounded-md sm:p-10 w-full md:w-[500px] bg-gray-100 text-gray-900 mx">
-        <div className="mb-4 text-center">
-          <h1 className="my-3 text-3xl font-semibold">Sign Up</h1>
+      <div className="flex flex-col p-6 rounded-md  w-full md:w-[500px] text-gray-900">
+        <div className="text-center">
+          <h1 className="mb-3 text-3xl font-semibold">Sign Up</h1>
         </div>
         <form
           onSubmit={handleSubmit(handleSignup)}
@@ -105,7 +114,7 @@ const SignUp = () => {
                 type="text"
                 {...register("name", { required: true })}
                 placeholder="Enter Your Name Here"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500  text-gray-900"
                 data-temp-mail-org="0"
               />
               {errors.name && (
@@ -141,7 +150,7 @@ const SignUp = () => {
                 type="email"
                 {...register("email", { required: true })}
                 placeholder="Enter Your Email Here"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 text-gray-900"
                 data-temp-mail-org="0"
               />
               {errors.email && (
@@ -173,7 +182,7 @@ const SignUp = () => {
                 })}
                 autoComplete="new-password"
                 placeholder="*******"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 bg-gray-200 text-gray-900"
+                className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-blue-500 text-gray-900"
               />
               <button
                 type="button"
