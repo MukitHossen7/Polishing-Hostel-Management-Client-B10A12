@@ -23,7 +23,7 @@ const Sidebar = () => {
   return (
     <div className="">
       {/* mobile devices */}
-      <div className="md:hidden">
+      <div className="md:hidden sticky top-0 z-50">
         {/* Hamburger Icon for Mobile Devices */}
         <div className="md:hidden flex items-center justify-between p-4 ">
           <Link to="/">
