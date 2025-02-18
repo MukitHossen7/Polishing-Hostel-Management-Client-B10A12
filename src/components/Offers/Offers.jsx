@@ -1,59 +1,62 @@
 const Offers = () => {
   const offers = [
     {
-      title: "Meal Plan Special",
+      title: "Weekend Treat",
       description:
-        "Get a 15% discount on all meal plans when you book a stay for 7 days or more.",
-      validity: "Valid till 30th April",
-      image: "meal_plan_offer.jpg",
+        "Get a 25% discount on selected meals every Friday and Saturday.",
+      validity: "Limited time every weekend.",
+      image: "https://i.ibb.co.com/rGz7FG47/new-years-eve-518032-1280.jpg",
     },
     {
-      title: "Group Discount",
+      title: "Loyalty Rewards",
       description:
-        "Group bookings of 5 or more get a 20% discount on all food orders.",
-      validity: "Valid till 31st March",
-      image: "group_discount_offer.jpg",
+        "Order 10+ meals in a month and get a 50% discount on your next meal.",
+      validity: "Valid throughout the year.",
+      image: "loyalty_rewards.jpg",
     },
     {
-      title: "Healthy Eating Promo",
-      description:
-        "Enjoy a free healthy breakfast for two when you book a meal plan.",
-      validity: "Valid till 15th May",
-      image: "healthy_eating_offer.jpg",
+      title: "Midnight Snack Deal",
+      description: "Get a free small snack on any meal order after 10 PM.",
+      validity: "Every night.",
+      image: "midnight_snack.jpg",
     },
     {
-      title: "Stay & Dine Special",
-      description:
-        "Book your stay and get a complimentary dinner for two from our special menu.",
-      validity: "Valid till 31st December",
-      image: "stay_dine_offer.jpg",
+      title: "Refer & Earn",
+      description: "Refer a new student and both get a 20% discount.",
+      validity: "Limited time offer.",
+      image: "refer_earn.jpg",
     },
     {
-      title: "Student Discount",
+      title: "Festive Special",
       description:
-        "All students get 10% off on meal orders with valid student ID.",
-      validity: "Valid all year round",
-      image: "student_discount_offer.jpg",
+        "Enjoy a 30% discount on special festival menus (e.g., Ramadan, Puja, New Year).",
+      validity: "During festive seasons.",
+      image: "festive_special.jpg",
     },
   ];
 
   return (
     <div>
       <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
           Special Offers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {offers.map((offer, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg p-6">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300"
+            >
               <img
                 src={offer.image}
-                alt="Offer"
-                className="w-full h-40 object-cover rounded-md"
+                alt={offer.title}
+                className="w-full h-56 object-cover rounded-md"
               />
-              <h3 className="text-xl font-semibold mt-4">{offer.title}</h3>
-              <p className="text-gray-500">{offer.description}</p>
-              <p className="text-lg font-semibold text-green-500">
+              <h3 className="text-xl font-semibold mt-4 text-gray-800">
+                {offer.title}
+              </h3>
+              <p className="text-gray-600 mt-2">{offer.description}</p>
+              <p className="text-lg font-semibold text-green-500 mt-4">
                 {offer.validity}
               </p>
             </div>
