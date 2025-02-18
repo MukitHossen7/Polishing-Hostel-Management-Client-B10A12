@@ -39,11 +39,11 @@ const Offers = () => {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-10 bg-gray-100">
-        <h2 className="text-3xl font-semibold text-center mb-6">
+      <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6">
           Special Offers
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {offers.map((offer, index) => (
             <div key={index} className="bg-white shadow-lg rounded-lg p-6">
               <img

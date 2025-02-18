@@ -21,7 +21,7 @@ const HostelMap = () => {
   };
   return (
     <div>
-      <section className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
+      <section className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto mt-10 md:mt-14">
         <div className="text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
             Hostel Map & Dining Area Location

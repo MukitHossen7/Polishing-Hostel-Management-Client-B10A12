@@ -46,7 +46,7 @@ const MeetOurChefs = () => {
       <section className="w-full px-4 py-12 bg-white text-center">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800">
-            👨‍🍳 Meet Our Chefs & Staff
+            Meet Our Chefs & Staff
           </h2>
           <p className="mt-2 text-gray-600">
             Get to know the talented chefs and staff members behind our

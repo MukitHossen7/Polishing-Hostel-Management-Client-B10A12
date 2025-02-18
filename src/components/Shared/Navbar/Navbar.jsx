@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
-import { IoIosLogOut, IoMdNotifications } from "react-icons/io";
+import { IoIosLogOut } from "react-icons/io";
 import toast from "react-hot-toast";
 import useRole from "../../../hooks/useRole";
 import navLogo from "../../../../src/assets/logo/New Project.png";
@@ -19,7 +19,7 @@ const Navbar = () => {
     });
   };
   return (
-    <nav className="bg-gray-100/50 text-gray-900 shadow-md sticky top-0 z-50 backdrop-blur-md ">
+    <nav className="bg-gray-100/50 text-gray-900 shadow sticky top-0 z-50 backdrop-blur-md ">
       <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Website Name */}
@@ -36,13 +36,13 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className=" hidden lg:flex items-center space-x-6">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-600 text-lg "
-                  : "hover:text-blue-600 transition text-lg "
+                  ? "text-blue-600 text-base "
+                  : "hover:text-blue-600 transition text-base "
               }
             >
               Home
@@ -51,8 +51,8 @@ const Navbar = () => {
               to="/meals"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-600 text-lg "
-                  : "hover:text-blue-600 transition text-lg "
+                  ? "text-blue-600 text-base "
+                  : "hover:text-blue-600 transition text-base "
               }
             >
               Meals
@@ -61,15 +61,23 @@ const Navbar = () => {
               to="/upcoming-meals"
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-600 text-lg "
-                  : "hover:text-blue-600 transition text-lg "
+                  ? "text-blue-600 text-base "
+                  : "hover:text-blue-600 transition text-base "
               }
             >
               Upcoming Meals
             </NavLink>
-            <div>
-              <IoMdNotifications className="text-2xl" />
-            </div>
+            <NavLink
+              to="/chefs_staff"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-600 text-base "
+                  : "hover:text-blue-600 transition text-base"
+              }
+            >
+              Chefs & Staff
+            </NavLink>
+
             {user ? (
               <div className="relative">
                 <img
@@ -93,7 +101,7 @@ const Navbar = () => {
                     ) : (
                       <Link
                         to="/dashboard/user-profile"
-                        className="block  px-4  text-gray-800 transition hover:bg-gray-300 w-32  py-2 rounded-md "
+                        className="block px-4 text-gray-800 transition hover:bg-gray-300 w-32  py-2 rounded-md "
                       >
                         Dashboard
                       </Link>
@@ -174,6 +182,16 @@ const Navbar = () => {
               }
             >
               Upcoming Meals
+            </NavLink>
+            <NavLink
+              to="/chefs_staff"
+              className={({ isActive }) =>
+                isActive
+                  ? "block px-4 text-blue-600 transition"
+                  : "block px-4 text-gray-800 transition"
+              }
+            >
+              Chefs & Staff
             </NavLink>
           </div>
           {user ? (

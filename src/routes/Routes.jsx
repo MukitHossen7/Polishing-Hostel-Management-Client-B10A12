@@ -25,6 +25,7 @@ import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
 import ViewMealsReviews from "../pages/Dashboard/User/ViewMealsReviews/ViewMealsReviews";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ServeMeals from "../pages/Dashboard/Admin/ServeMeals/ServeMeals";
+import ChefsStaff from "../pages/ChefsStaff/ChefsStaff";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/upcoming-meals",
         element: <UpcomingMeals></UpcomingMeals>,
+      },
+      {
+        path: "/chefs_staff",
+        element: <ChefsStaff></ChefsStaff>,
       },
       {
         path: "/meal/:id",

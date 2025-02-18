@@ -4,7 +4,6 @@ import MealsCategory from "../../components/MealsCategory/MealsCategory";
 import MembershipSection from "../../components/MembershipSection/MembershipSection";
 import WeeklyMealPlan from "../../components/WeeklyMealPlan/WeeklyMealPlan";
 import HostelMap from "../../components/HostelMap/HostelMap";
-// import MeetOurChefs from "../../components/MeetOurChefs/MeetOurChefs";
 import Facilities from "../../components/Facilities/Facilities";
 import Offers from "../../components/Offers/Offers";
 
@@ -18,10 +17,8 @@ const Home = () => {
       <MembershipSection></MembershipSection>
       <MealsCategory></MealsCategory>
       <WeeklyMealPlan></WeeklyMealPlan>
-      {/* <MeetOurChefs></MeetOurChefs> */}
       <Facilities></Facilities>
       <Offers></Offers>
-
       <HostelMap></HostelMap>
     </div>
   );

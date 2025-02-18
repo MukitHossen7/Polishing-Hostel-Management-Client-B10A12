@@ -106,16 +106,6 @@ const Banner = () => {
           Easily manage student meals, reviews, and requests efficiently in your
           university hostel.
         </p>
-        <div className="flex flex-row w-full sm:w-auto">
-          <input
-            type="text"
-            placeholder="Search for meals or reviews..."
-            className="w-full sm:w-72 px-4 py-2 rounded-l-lg text-black focus:outline-none bg-gray-100"
-          />
-          <button className="hover:bg-blue-900 bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-r-lg font-semibold">
-            Search
-          </button>
-        </div>
       </div>
     </section>
   );

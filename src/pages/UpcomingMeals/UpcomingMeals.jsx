@@ -55,7 +55,7 @@ const UpcomingMeals = () => {
   };
 
   return (
-    <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto  pt-6 pb-14">
+    <div className="w-11/12 md:w-11/12 lg:w-11/12 xl:container mx-auto  pt-8 pb-14">
       <Helmet>
         <title>Upcoming Meals || Hostel Management</title>
       </Helmet>

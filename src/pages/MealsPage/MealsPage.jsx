@@ -36,7 +36,7 @@ const MealsPage = () => {
   };
 
   return (
-    <div className="w-11/12 md:11/12 lg:w-11/12 xl:container mx-auto px-4 pt-8 pb-14">
+    <div className="w-11/12 md:11/12 lg:w-11/12 xl:container mx-auto  pt-8 pb-14">
       <Helmet>
         <title>Meals || Hostel Management</title>
       </Helmet>
