@@ -6,6 +6,7 @@ import WeeklyMealPlan from "../../components/WeeklyMealPlan/WeeklyMealPlan";
 import HostelMap from "../../components/HostelMap/HostelMap";
 import Facilities from "../../components/Facilities/Facilities";
 import Offers from "../../components/Offers/Offers";
+import FAQ from "../../components/FAQ/FAQ";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Offers></Offers>
       <WeeklyMealPlan></WeeklyMealPlan>
       <Facilities></Facilities>
+      <FAQ></FAQ>
       <HostelMap></HostelMap>
     </div>
   );
